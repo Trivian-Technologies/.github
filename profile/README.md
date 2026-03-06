@@ -14,10 +14,10 @@ Trivian Technologies builds developer infrastructure, AI governance systems, and
 
 | Project | Description |
 |-------|-------------|
-| Rosetta | AI governance middleware |
-| Rosetta API | Request evaluation interface |
-| Rosetta Docs | Documentation portal |
-| Rosetta Sandbox | Agent testing environment |
+| Syzygy Rosetta | AI governance middleware |
+| Syzygy Rosetta API | Request evaluation interface |
+| Syzygy Rosetta Docs | Documentation portal |
+| Syzygy Rosetta Sandbox | Agent testing environment |
 
 ## Mission
 
