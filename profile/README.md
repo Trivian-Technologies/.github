@@ -64,8 +64,8 @@ One endpoint. Every AI output evaluated, scored, and governed — before it reac
 
 | Repo | Description | Status |
 |---|---|---|
-| [syzygy-rosetta-originbase](https://github.com/Trivian-Technologies/syzygy-rosetta-originbase) | Core governance engine — `POST /evaluate` | 🔄 Active |
-| [syzygy-rosetta-sandbox](https://github.com/Trivian-Technologies/syzygy-rosetta-sandbox) | Multi-agent drift testing and simulation environment | 🔄 Active |
+| [syzygy-rosetta-originbase](https://github.com/Trivian-Technologies/syzygy-rosetta-originbase) | Core governance engine — `POST /evaluate` | 🔄 Ongoing |
+| [syzygy-rosetta-sandbox](https://github.com/Trivian-Technologies/syzygy-rosetta-sandbox) | Multi-agent drift testing and simulation environment | 🔵 Planned |
 | [syzygy-rosetta-docs](https://github.com/Trivian-Technologies/syzygy-rosetta-docs) | Full GitBook documentation | 🔄 Active |
 | [syzygy-rosetta-sdk](https://github.com/Trivian-Technologies/syzygy-rosetta-sdk) | Python and JavaScript SDKs | 🔵 Planned |
 | [Trivian-Infrastructure](https://github.com/Trivian-Technologies/Trivian-Infrastructure) | Future Trivian network infrastructure | 🔵 Planned |
@@ -88,7 +88,7 @@ One endpoint. Every AI output evaluated, scored, and governed — before it reac
 git clone https://github.com/Trivian-Technologies/syzygy-rosetta-originbase.git
 cd syzygy-rosetta-originbase
 
-# Build and run
+# Build and run (STILL IN PROD)
 docker build -t rosetta .
 docker run -p 8000:8000 rosetta
 
@@ -135,32 +135,3 @@ For enterprise pilot enquiries, API trial access, or partnership discussions:
 *Built to make AI safe for production.*
 
 </div>
-
-
-
-
-
-# Trivian Technologies
-
-Trivian Technologies builds developer infrastructure, AI governance systems, and scalable digital platforms.
-
-## Focus Areas
-
-- AI Governance Infrastructure
-- API-first Platforms
-- Security & Safety Middleware
-- Developer Tooling
-- Distributed Systems
-
-## Core Projects
-
-| Project | Description |
-|-------|-------------|
-| Syzygy Rosetta | AI governance middleware |
-| Syzygy Rosetta API | Request evaluation interface |
-| Syzygy Rosetta Docs | Documentation portal |
-| Syzygy Rosetta Sandbox | Agent testing environment |
-
-## Mission
-
-Build infrastructure that enables organizations to safely deploy intelligent systems at scale.
