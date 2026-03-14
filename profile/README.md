@@ -138,7 +138,7 @@ For enterprise pilot enquiries, API trial access, or partnership discussions:
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/Trivian-Technologies/trivian-build-activity/main/assets/build-activity.svg"
+    src="https://github.com/Trivian-Technologies/trivian-build-activity/blob/main/assets/build-activity.svg"
     alt="Trivian Technologies — Build Activity"
     width="860"
   />
