@@ -15,6 +15,14 @@ Make AI deployable, auditable, and safe for enterprise adoption.
 
 ---
 
+<p align="center">
+  <img
+    src="https://github.com/Trivian-Technologies/trivian-build-activity/blob/main/assets/build-activity.svg"
+    alt="Trivian Technologies — Build Activity"
+    width="860"
+  />
+</p>
+
 ## What We Build
 
 Trivian Technologies builds **AI governance middleware** — the infrastructure layer between AI models and the production systems that deploy them.
@@ -135,11 +143,3 @@ For enterprise pilot enquiries, API trial access, or partnership discussions:
 *Built to make AI safe for production.*
 
 </div>
-
-<p align="center">
-  <img
-    src="https://github.com/Trivian-Technologies/trivian-build-activity/blob/main/assets/build-activity.svg"
-    alt="Trivian Technologies — Build Activity"
-    width="860"
-  />
-</p>
