@@ -42,27 +42,16 @@ POST /evaluate
 Every `POST /evaluate` call returns exactly these 8 fields:
 
 ```json
-
 {
-
-"decision": "allow | rewrite | escalate",
-
-"risk_score": 0.12,
-
-"confidence": 0.91,
-
-"violations": [],
-
-"rewrite": ,
-
-"reasoning": "Input within acceptable parameters for financial context.",
-
-"field_notes": [],
-
-"timestamp": "2026-03-21T14:32:00Z"
-
+  "decision": "allow | rewrite | escalate",
+  "risk_score": 0.12,
+  "confidence": 0.91,
+  "violations": [],
+  "rewrite": null,
+  "reasoning": "Input within acceptable parameters for financial context.",
+  "field_notes": [],
+  "timestamp": "2026-03-21T14:32:00Z"
 }
-
 ```
 
 ### Decision thresholds
@@ -82,6 +71,14 @@ One endpoint. Every AI output evaluated, scored, and governed — before it reac
 **What Rosetta is:** infrastructure. It sits between your AI and your users and makes sure what goes through is safe, compliant, and auditable.
 
 ---
+How It Works
+Step	Component	What it does
+1	`safety_layer.py`	Pre-classifies input — tags authority, manipulation, dependency, escalation patterns
+2	`policy engine`	Matches against industry-specific deterministic rules (finance / healthcare / general)
+3	`risk_scoring.py`	ML composite scorer — KeywordScorer + FeatureScorer + LLMScorer
+4	Decision logic	Threshold applied — allow / rewrite / escalate
+5	Audit log	Full evaluation appended to `logs/evaluations.json`
+
 
 ## Why It Matters
 
@@ -107,6 +104,16 @@ One endpoint. Every AI output evaluated, scored, and governed — before it reac
 | [TrivianTech-website](https://github.com/Trivian-Technologies/TrivianTech-website) | triviantech.com source | 🔄 Active |
 
 ---
+
+Our Repositories
+Repository	Description	Status
+syzygy-rosetta-originbase	Core governance engine — spec-compliant, Docker deployment in progress	Active
+syzygy-rosetta-sandbox	Multi-agent testing and before/after drift simulation	Active
+syzygy-rosetta-sdk	Official Python and JS SDK	Planned — Phase 4
+syzygy-rosetta-docs	Full technical documentation	Active
+Trivian-Infrastructure	Future infrastructure — Lattice Engine, Gaian Interface	Early Design
+TrivianTech-website	Official website source	In Development
+
 
 ## Tech Stack
 
@@ -162,6 +169,16 @@ curl -X POST http://localhost:8000/evaluate \\
 
 Full documentation → [docs.triviantech.com](https://github.com/Trivian-Technologies/syzygy-rosetta-docs)
 
+---
+Who We Build For
+Enterprise AI teams deploying AI into production
+Fintech companies requiring regulatory compliance enforcement
+Healthcare platforms handling sensitive AI outputs
+AI agent developers needing multi-agent governance
+Regulated SaaS platforms with enterprise compliance requirements
+---
+Current Status
+Syzygy Rosetta core engine is spec-compliant and confirmed working. The full 8-step evaluation pipeline is live — safety classification, deterministic policy enforcement, ML risk scoring, structured decision output, and persistent audit logging. Docker deployment and multi-agent sandbox testing are in progress.
 ---
 
 ## Who This Is For
