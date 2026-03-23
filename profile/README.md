@@ -45,21 +45,21 @@ Every `POST /evaluate` call returns exactly these 8 fields:
 
 {
 
-&#x20; "decision": "allow | rewrite | escalate",
+"decision": "allow | rewrite | escalate",
 
-&#x20; "risk\_score": 0.12,
+"risk_score": 0.12,
 
-&#x20; "confidence": 0.91,
+"confidence": 0.91,
 
-&#x20; "violations": \[],
+"violations": [],
 
-&#x20; "rewrite": null,
+"rewrite": ,
 
-&#x20; "reasoning": "Input within acceptable parameters for financial context.",
+"reasoning": "Input within acceptable parameters for financial context.",
 
-&#x20; "field\_notes": \[],
+"field_notes": [],
 
-&#x20; "timestamp": "2026-03-21T14:32:00Z"
+"timestamp": "2026-03-21T14:32:00Z"
 
 }
 
@@ -140,23 +140,23 @@ docker run -p 8000:8000 rosetta
 
 curl -X POST http://localhost:8000/evaluate \\
 
-&#x20; -H "Content-Type: application/json" \\
+-H "Content-Type: application/json" \\
 
-&#x20; -d '{
+-d '{
 
-&#x20;   "input": "Your AI output here",
+"input": "Your AI output here",
 
-&#x20;   "context": {
+"context": {
 
-&#x20;     "industry": "healthcare",
+"industry": "healthcare",
 
-&#x20;     "user\_id": "demo",
+"user_id": "demo",
 
-&#x20;     "environment": "staging"
+"environment": "staging"
 
-&#x20;   }
+}
 
-&#x20; }'
+}'
 
 ```
 
