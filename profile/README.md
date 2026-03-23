@@ -35,21 +35,34 @@ Our flagship product, **Syzygy Rosetta**, is a containerised, API-first governan
 
 ## Syzygy Rosetta
 ```bash
+
 POST /evaluate
+
 ```
 Every `POST /evaluate` call returns exactly these 8 fields:
 
 ```json
+
 {
-  "decision": "allow | rewrite | escalate",
-  "risk_score": 0.12,
-  "confidence": 0.91,
-  "violations": [],
-  "rewrite": null,
-  "reasoning": "Input within acceptable parameters for financial context.",
-  "field_notes": [],
-  "timestamp": "2026-03-21T14:32:00Z"
+
+&#x20; "decision": "allow | rewrite | escalate",
+
+&#x20; "risk\_score": 0.12,
+
+&#x20; "confidence": 0.91,
+
+&#x20; "violations": \[],
+
+&#x20; "rewrite": null,
+
+&#x20; "reasoning": "Input within acceptable parameters for financial context.",
+
+&#x20; "field\_notes": \[],
+
+&#x20; "timestamp": "2026-03-21T14:32:00Z"
+
 }
+
 ```
 
 ### Decision thresholds
@@ -106,25 +119,45 @@ One endpoint. Every AI output evaluated, scored, and governed — before it reac
 
 ## Quick Start
 ```bash
-# Clone the core engine
+
+\# Clone the core engine
+
 git clone https://github.com/Trivian-Technologies/syzygy-rosetta-originbase.git
+
 cd syzygy-rosetta-originbase
 
-# Build and run (STILL IN PROD)
+
+
+\# Build and run (STILL IN PROD)
+
 docker build -t rosetta .
+
 docker run -p 8000:8000 rosetta
 
-# Evaluate your first input
-curl -X POST http://localhost:8000/evaluate \
-  -H "Content-Type: application/json" \
-  -d '{
-    "input": "Your AI output here",
-    "context": {
-      "industry": "healthcare",
-      "user_id": "demo",
-      "environment": "staging"
-    }
-  }'
+
+
+\# Evaluate your first input
+
+curl -X POST http://localhost:8000/evaluate \\
+
+&#x20; -H "Content-Type: application/json" \\
+
+&#x20; -d '{
+
+&#x20;   "input": "Your AI output here",
+
+&#x20;   "context": {
+
+&#x20;     "industry": "healthcare",
+
+&#x20;     "user\_id": "demo",
+
+&#x20;     "environment": "staging"
+
+&#x20;   }
+
+&#x20; }'
+
 ```
 
 Full documentation → [docs.triviantech.com](https://github.com/Trivian-Technologies/syzygy-rosetta-docs)
