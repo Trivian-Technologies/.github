@@ -71,7 +71,8 @@ One endpoint. Every AI output evaluated, scored, and governed — before it reac
 **What Rosetta is:** infrastructure. It sits between your AI and your users and makes sure what goes through is safe, compliant, and auditable.
 
 ---
-How It Works
+## How It Works
+
 1	`safety_layer.py`	Pre-classifies input — tags authority, manipulation, dependency, escalation patterns
 
 2	`policy engine`	Matches against industry-specific deterministic rules (finance / healthcare / general)
