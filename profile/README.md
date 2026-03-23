@@ -72,13 +72,16 @@ One endpoint. Every AI output evaluated, scored, and governed — before it reac
 
 ---
 How It Works
-Step	Component	What it does
 1	`safety_layer.py`	Pre-classifies input — tags authority, manipulation, dependency, escalation patterns
-2	`policy engine`	Matches against industry-specific deterministic rules (finance / healthcare / general)
-3	`risk_scoring.py`	ML composite scorer — KeywordScorer + FeatureScorer + LLMScorer
-4	Decision logic	Threshold applied — allow / rewrite / escalate
-5	Audit log	Full evaluation appended to `logs/evaluations.json`
 
+2	`policy engine`	Matches against industry-specific deterministic rules (finance / healthcare / general)
+
+3	`risk_scoring.py`	ML composite scorer — KeywordScorer + FeatureScorer + LLMScorer
+
+4	Decision logic	Threshold applied — allow / rewrite / escalate
+
+5	Audit log	Full evaluation appended to `logs/evaluations.json`
+---
 
 ## Why It Matters
 
@@ -96,24 +99,14 @@ Step	Component	What it does
 
 | Repo | Description | Status |
 |---|---|---|
-| [syzygy-rosetta-originbase](https://github.com/Trivian-Technologies/syzygy-rosetta-originbase) | Core governance engine — `POST /evaluate` | 🔄 Ongoing |
-| [syzygy-rosetta-sandbox](https://github.com/Trivian-Technologies/syzygy-rosetta-sandbox) | Multi-agent drift testing and simulation environment | 🔵 Planned |
-| [syzygy-rosetta-docs](https://github.com/Trivian-Technologies/syzygy-rosetta-docs) | Full GitBook documentation | 🔄 Active |
-| [syzygy-rosetta-sdk](https://github.com/Trivian-Technologies/syzygy-rosetta-sdk) | Python and JavaScript SDKs | 🔵 Planned |
-| [Trivian-Infrastructure](https://github.com/Trivian-Technologies/Trivian-Infrastructure) | Future Trivian network infrastructure | 🔵 Planned |
-| [TrivianTech-website](https://github.com/Trivian-Technologies/TrivianTech-website) | triviantech.com source | 🔄 Active |
+| [syzygy-rosetta-originbase](https://github.com/Trivian-Technologies/syzygy-rosetta-originbase) | Core governance engine — spec-compliant, Docker deployment in progress — `POST /evaluate` | 🔄 Active |
+| [syzygy-rosetta-sandbox](https://github.com/Trivian-Technologies/syzygy-rosetta-sandbox) | Multi-agent testing and before/after drift simulation | 🔵 Planned |
+| [syzygy-rosetta-docs](https://github.com/Trivian-Technologies/syzygy-rosetta-docs) | Full technical documentation | 🔄 Active |
+| [syzygy-rosetta-sdk](https://github.com/Trivian-Technologies/syzygy-rosetta-sdk) | Official Python and JS SDK | 🔵 Planned |
+| [Trivian-Infrastructure](https://github.com/Trivian-Technologies/Trivian-Infrastructure) | Future infrastructure — Trivian Lattice Engine, Gaian Interface	Early Design | 🔵 Planned |
+| [TrivianTech-website](https://github.com/Trivian-Technologies/TrivianTech-website) | Official website source	In Development | 🔄 Active |
 
 ---
-
-Our Repositories
-Repository	Description	Status
-syzygy-rosetta-originbase	Core governance engine — spec-compliant, Docker deployment in progress	Active
-syzygy-rosetta-sandbox	Multi-agent testing and before/after drift simulation	Active
-syzygy-rosetta-sdk	Official Python and JS SDK	Planned — Phase 4
-syzygy-rosetta-docs	Full technical documentation	Active
-Trivian-Infrastructure	Future infrastructure — Lattice Engine, Gaian Interface	Early Design
-TrivianTech-website	Official website source	In Development
-
 
 ## Tech Stack
 
@@ -168,17 +161,6 @@ curl -X POST http://localhost:8000/evaluate \\
 ```
 
 Full documentation → [docs.triviantech.com](https://github.com/Trivian-Technologies/syzygy-rosetta-docs)
-
----
-Who We Build For
-Enterprise AI teams deploying AI into production
-Fintech companies requiring regulatory compliance enforcement
-Healthcare platforms handling sensitive AI outputs
-AI agent developers needing multi-agent governance
-Regulated SaaS platforms with enterprise compliance requirements
----
-Current Status
-Syzygy Rosetta core engine is spec-compliant and confirmed working. The full 8-step evaluation pipeline is live — safety classification, deterministic policy enforcement, ML risk scoring, structured decision output, and persistent audit logging. Docker deployment and multi-agent sandbox testing are in progress.
 ---
 
 ## Who This Is For
@@ -187,11 +169,21 @@ Syzygy Rosetta core engine is spec-compliant and confirmed working. The full 8-s
 
 **Developers and AI engineers** building on top of LLM providers who need structured output validation before their system acts on model responses.
 
+**Fintech companies** requiring regulatory compliance enforcement
+
+**Healthcare platforms** handling sensitive AI outputs
+
+**AI agent developers** needing multi-agent governance
+
+**Regulated SaaS platforms** with enterprise compliance requirements
+
 **Compliance and risk functions** that need a documented, exportable audit trail of every AI decision made in production.
 
 ---
 
 ## Status
+
+Syzygy Rosetta core engine is spec-compliant and confirmed working. The full 8-step evaluation pipeline is live — safety classification, deterministic policy enforcement, ML risk scoring, structured decision output, and persistent audit logging. Docker deployment and multi-agent sandbox testing are in progress.
 
 Syzygy Rosetta is in active development. MVP delivery in progress.
 
