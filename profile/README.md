@@ -82,6 +82,7 @@ One endpoint. Every AI output evaluated, scored, and governed — before it reac
 4	Decision logic	Threshold applied — allow / rewrite / escalate
 
 5	Audit log	Full evaluation appended to `logs/evaluations.json`
+
 ---
 
 ## Why It Matters
