@@ -37,16 +37,30 @@ Our flagship product, **Syzygy Rosetta**, is a containerised, API-first governan
 ```bash
 POST /evaluate
 ```
+Every `POST /evaluate` call returns exactly these 8 fields:
+
 ```json
 {
   "decision": "allow | rewrite | escalate",
-  "risk_score": 0.85,
+  "risk_score": 0.12,
   "confidence": 0.91,
-  "violations": ["unsafe_medical_directive"],
-  "rewrite": "Please consult a qualified medical professional for guidance on this matter.",
-  "timestamp": "2026-03-10T14:22:00Z"
+  "violations": [],
+  "rewrite": null,
+  "reasoning": "Input within acceptable parameters for financial context.",
+  "field_notes": [],
+  "timestamp": "2026-03-21T14:32:00Z"
 }
 ```
+
+### Decision thresholds
+
+| Risk Score | Decision | What happens |
+|---|---|---|
+| `< 0.4` | `allow` | Input passed through. `violations` is empty. |
+| `0.4 – 0.7` | `rewrite` | Soft violation. `rewrite` field contains corrected output. |
+| `> 0.7` | `escalate` | Hard violation. Routed to human review. |
+
+---
 
 One endpoint. Every AI output evaluated, scored, and governed — before it reaches production.
 
