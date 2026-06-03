@@ -6,8 +6,8 @@
 
 When AI assists with lending, fraud review, AML monitoring, or underwriting, every decision should be auditable, defensible, and reviewable.
 
-[![Website](https://img.shields.io/badge/Website-triviantech.com-B8922A?style=flat-square&logo=googlechrome&logoColor=white)](https://)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Trivian_Technologies-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/)
+[![Website](https://img.shields.io/badge/Website-triviantech.com-B8922A?style=flat-square&logo=googlechrome&logoColor=white)](https://triviantech.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Trivian_Technologies-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/trivian-technologies)
 [![GitHub](https://img.shields.io/badge/GitHub-Trivian_Technologies-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/trivian-technologies)
 
 </div>
@@ -72,9 +72,9 @@ As AI adoption accelerates across financial services, organizations need evidenc
 
 ## Resources
 
-- Website: Restricted
-- Documentation: Restricted
-- LinkedIn: Pending Resolve
+- Website: triviantech.com
+- Documentation: triviantech.com/docs
+- LinkedIn: https://www.linkedin.com/company/trivian-technologies
 
 ---
 
