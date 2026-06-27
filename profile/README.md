@@ -73,7 +73,6 @@ As AI adoption accelerates across financial services, organizations need evidenc
 ## Resources
 
 - 🌐 Website: https://triviantech.com/
-- 📂 Documentation: https://triviantech.com/docs
 - LinkedIn: https://www.linkedin.com/company/trivian-technologies
 
 ---
